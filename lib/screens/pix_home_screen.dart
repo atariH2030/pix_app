@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pix_app/screens/generate_qr_code_screen.dart'; // IMPORTAR
-import 'package:pix_app/screens/pix_copy_paste_screen.dart'; // IMPORTAR
-import 'package:pix_app/screens/read_qr_code_screen.dart'; // IMPORTAR
+import 'package:pix_app/screens/generate_qr_code_screen.dart';
+import 'package:pix_app/screens/pix_copy_paste_screen.dart';
+import 'package:pix_app/screens/read_qr_code_screen.dart';
 import 'package:pix_app/screens/send_pix_screen.dart';
 
 class PixHomeScreen extends StatelessWidget {
@@ -34,7 +34,6 @@ class PixHomeScreen extends StatelessWidget {
             _buildActionCard(
               icon: Icons.qr_code_scanner,
               label: 'Ler QR Code',
-              // ATUALIZAR NAVEGAÇÃO
               onTap: () {
                 Navigator.push(
                   context,
@@ -47,7 +46,6 @@ class PixHomeScreen extends StatelessWidget {
             _buildActionCard(
               icon: Icons.content_copy,
               label: 'PIX Copia e Cola',
-              // ATUALIZAR NAVEGAÇÃO
               onTap: () {
                 Navigator.push(
                   context,
@@ -60,7 +58,6 @@ class PixHomeScreen extends StatelessWidget {
             _buildActionCard(
               icon: Icons.receipt_long,
               label: 'Receber PIX',
-              // ATUALIZAR NAVEGAÇÃO
               onTap: () {
                 Navigator.push(
                   context,
@@ -76,12 +73,12 @@ class PixHomeScreen extends StatelessWidget {
     );
   }
 
+  // ESTA É A PARTE QUE FALTAVA
   Widget _buildActionCard({
     required IconData icon,
     required String label,
     required VoidCallback onTap,
   }) {
-    // ... (O resto do código permanece igual)
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
